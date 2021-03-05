@@ -1,0 +1,9 @@
+.activity {
+  grid-area: activity;
+  align-items: flex-start;
+}
+
+.activity > .chart {
+  width: 100%;
+  background-color: aqua;
+}

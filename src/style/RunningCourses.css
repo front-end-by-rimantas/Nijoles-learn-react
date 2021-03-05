@@ -1,0 +1,20 @@
+.running-courses {
+  grid-area: running;
+  align-items: flex-start;
+}
+
+.running-courses > .card-list {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.running-courses > .card-list > .card {
+  display: inline-block;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  flex: 1;
+}

@@ -1,0 +1,16 @@
+.suggested-courses {
+  grid-area: suggested;
+  align-items: flex-start;
+}
+
+.suggested-courses > .courses-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+.suggested-courses > .courses-list > .item {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+}
