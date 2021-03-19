@@ -27,3 +27,8 @@
 .aside > .menu-list > .menu-item.active {
   background-color: #36f;
 }
+.aside .menu-item > img {
+  height: 20px;
+}
+.aside .menu-item > span {
+}

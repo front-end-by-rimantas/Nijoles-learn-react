@@ -1,15 +1,15 @@
-function AsideMenuItem(props) {
+function AsideFavoriteItem(props) {
     const { active, handleClick, item } = props;
-    const { title, unique, img } = item;
+    const { title, unique, count } = item;
 
     return (
         <div className={'menu-item' + (active ? ' active' : '')}
             onClick={() => handleClick(unique)}
         >
-            <img src={img} alt="" />
             <span>{title}</span>
+            <span>({count})</span>
         </div>
     );
 }
 
-export default AsideMenuItem;
+export default AsideFavoriteItem;

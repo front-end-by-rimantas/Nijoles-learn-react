@@ -1,20 +1,26 @@
 import { useState } from 'react';
 import AsideMenuItem from './AsideMenuItem.js';
+import AsideFavoriteItem from './AsideFavoriteItem.js';
+import imgBook from '../images/menu/book.png';
+import imgInbox from '../images/menu/inbox.png';
+import imgCart from '../images/menu/cart.png';
+import imgShare from '../images/menu/share.png';
+import imgStar from '../images/menu/star.png';
 import '../style/AsideMenu.css';
 
 function AsideMenu() {
     const menu = [
-        { title: 'Courses', unique: 'menu-Courses' },
-        { title: 'Inbox', unique: 'menu-Inbox' },
-        { title: 'Carts', unique: 'menu-Carts' },
-        { title: 'Sharing', unique: 'menu-Sharing' },
-        { title: 'Achivements', unique: 'menu-Achivements' },
+        { title: 'Courses', unique: 'menu-Courses', img: imgBook },
+        { title: 'Inbox', unique: 'menu-Inbox', img: imgInbox },
+        { title: 'Carts', unique: 'menu-Carts', img: imgCart },
+        { title: 'Sharing', unique: 'menu-Sharing', img: imgShare },
+        { title: 'Achivements', unique: 'menu-Achivements', img: imgStar },
     ];
     const favorite = [
-        { title: 'IOS app design', unique: 'favorite-IOS' },
-        { title: 'Carts', unique: 'favorite-Carts' },
-        { title: 'UX reaseardh', unique: 'favorite-UX' },
-        { title: 'Principle', unique: 'favorite-Principle' },
+        { title: 'IOS app design', unique: 'favorite-IOS', count: 10 },
+        { title: 'Carts', unique: 'favorite-Carts', count: 7 },
+        { title: 'UX reaseardh', unique: 'favorite-UX', count: 5 },
+        { title: 'Principle', unique: 'favorite-Principle', count: 3 },
     ];
     const [activeItem, updateActiveItem] = useState('menu-Courses');
 
@@ -33,7 +39,7 @@ function AsideMenu() {
             <div className="title">Favorite list</div>
             <div className="menu-list">
                 {favorite.map(item =>
-                    <AsideMenuItem key={item.unique}
+                    <AsideFavoriteItem key={item.unique}
                         active={item.unique === activeItem}
                         handleClick={updateActiveItem}
                         item={item} />
