@@ -2,4 +2,28 @@
   grid-area: aside;
   background-color: #ccc;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aside > .title {
+  font-size: 14px;
+  line-height: 20px;
+}
+.aside > .menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 18px;
+  line-height: 25px;
+}
+.aside > .menu-list > .menu-item {
+  cursor: pointer;
+}
+.aside > .menu-list > .menu-item:hover {
+  background-color: #eee;
+}
+.aside > .menu-list > .menu-item.active {
+  background-color: #36f;
 }
